@@ -1,0 +1,21 @@
+body{
+	width:427px;
+	height: 600px;;
+}
+#ui{ width:427px;
+	height: 400px;
+}
+#foot{
+	width:427px;
+	height: 200px;
+}
+#audios{
+	width:400px;
+	height: 200px;
+}
+#one{
+	padding-left:230px;
+}
+#two{
+	padding-left:210px;
+}
