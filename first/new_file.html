@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<header><h1>Hello world</h1></header>
+		<nav>
+			<ul>
+				<li>one</li>
+				<li>two</li>
+			</ul>
+		</nav>
+		<article>
+			<header><h1>apple</h1></header>
+			<footer>A</footer>
+		</article>
+		<form method="get" action="#">
+			<input type="number" name="demoNum" min="1" max="100" step="2"/>
+			<input type="number" min="3" max="80" step="5" />
+			<input type="email" name="email" placeholder="请输入邮箱地址" />
+			<input type="tel" placeholder="请输入电话号码" name="p" />
+			<input type="range" name="range" min="1" max="10" step="2" />
+			<input type="color" name="color"  />
+			搜索框<input type="search" name="search" /><br />
+			<input type="submit" />
+			金庸功夫<input type="search" name="jinyong" autocomplete="on" list="one" result/>
+				<datalist id="one">
+					<option>亢龙有悔</option>
+					<option>飞龙在天</option>
+					<option>神龙摆尾</option>
+				</datalist>
+			小说读物<input type="search" name="xiaoshuo" list="novel" autocomplete="on" />
+					<datalist id="novel">
+						<option>夏至未至</option>
+						<option>微微一笑很倾城</option>
+						<option>悲伤逆流成河</option>
+					</datalist>
+		</form>
+		<form >
+			<input type="range" min="0" max="100" step="1" name="range"/>
+			+<input type="number" name="num" />
+		</form>
+		<form id="testform" method="get"> 
+			姓名：<input type="text" name="name1" required="required" autofocus="autofocus"> <input type="submit" value="提交"/> 
+		</form> 自我介绍：<textarea name="area1" form="testform"></textarea>
+		<form id="test" method="get">
+			<input type="submit" name="s1" value="v1" formaction="index.html" />
+			<input type="submit" name="s2" value="v2" formmethod="post" />
+			<input type="submit" name="s3" value="v3" formmethod="get" />
+		</form>
+		/*作业*/
+		<fieldset>
+			<legend>自我介绍</legend>
+		</fieldset>
+</html>

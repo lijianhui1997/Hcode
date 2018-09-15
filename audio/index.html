@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>音乐播放器</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<script>
+			
+			function playone(){
+				var audio=document.getElementById('audios');
+				var one=document.getElementById('one');
+					audio.src='01.mp3';			audio.play();
+			}
+			function playtwo(){
+				var audio=document.getElementById('audios');
+				var two=document.getElementById('two');
+				audio.src='02.mp3';
+				audio.play();
+			}
+		
+		</script>
+	</head>
+	<body>
+		<header id="ui">
+			<img src="QQ截图20180914150123.png" /><br />
+			<span >千千阙歌 
+				<a href="#" id="one" onclick="playone()">播放</a> 
+			</span><br/>    
+			<hr color="yellow"/>
+			<span>思念人之屋
+				<a href="#" id="two" onclick="playtwo()">播放</a>
+			</span>
+		</header>
+			
+		<footer id="foot">
+			<audio controls="controls" id="audios">
+				<source src="01.mp3"></source>
+				<source src="02.mp3"></source>
+			</audio>
+		</footer>
+	</body>
+</html>
