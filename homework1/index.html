@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/homework.js"></script>
+	</head>
+	<body>
+		<h1>请填写个人信息</h1>
+		<form>
+			<fieldset class="side">
+				<legend class="one">基本信息</legend>
+				姓名<input type="text" name="mingzi" required="required" placeholder="请输入姓名"/><br />
+				年龄<input type="number" placeholder="20" />
+			</fieldset>
+			<fieldset class="side">
+				<legend class="one">你想在哪里收到邮件？</legend>
+				邮箱<input type="search" id="va" autocomplete="on" list="mail" required="required"
+					placeholder="请输入邮箱" oninput="myfunction()"/>
+					<datalist id="mail">
+						<option>123@qq.com</option>
+						<option>123@163.com</option>
+						<option>123@126.com</option>
+						<option>123@gmail.com</option>
+						<option>123@yahoo.com.cn</option>
+					</datalist>
+			</fieldset>
+			<fieldset class="side">
+				<legend class="one">收入情况</legend>
+				月收入<input type="text" list="salary"  name="shouru" placeholder="20k+"/>
+					<datalist id="salary">
+						<option>20k</option>
+						<option>30k</option>
+					</datalist><br />
+				银行卡<input type="text" />
+				有效期<input type="date" />
+			</fieldset>
+			<fieldset class="side">
+				<legend class="one">选择提交文件</legend>
+				文件<input type="file" />
+			</fieldset>
+			<input type="submit" />
+		</form>
+	</body>
+</html>
+
