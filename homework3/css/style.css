@@ -1,0 +1,68 @@
+#all{
+	width:400px;
+	height: 250px;;
+}
+.topic{
+	color:red;
+	font-size:30px;
+}
+.two{
+	color: mediumpurple;
+}
+#colors{
+	width: 350px;
+	height: 50px;
+	align-content: center;
+	border:darkgray solid;
+}
+#greycolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color: grey;
+	float: left;
+}
+#purplecolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color:mediumpurple;
+	float: left;
+}
+#redcolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color:red;
+	float: left;
+}
+#bluecolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color:deepskyblue;
+	float: left;
+}
+#orangecolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color:orange;
+	float: left;
+}
+#greencolor{
+	margin: 10px;
+	width:20px;
+	height: 20px;
+	border:solid 1px;
+	background-color:greenyellow;
+	float: left;
+}
+#word{
+	background-color: darkgrey;
+}

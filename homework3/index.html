@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<title>页面换肤</title>
+		<script>
+			var arr=new Array("darkgrey","mediumpurple","red","deepskyblue","orange","greenyellow")
+			function toChangegrey(){
+				document.getElementById('greycolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="darkgrey";
+				window.localStorage.setItem("color",arr[0]);
+			}
+			function toChangepurple(){
+				document.getElementById('purplecolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="mediumpurple";
+				window.localStorage.setItem("color","mediumpurple");
+			}
+			function toChangered(){
+				document.getElementById('redcolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="red";
+				window.localStorage.setItem("color",arr[2]);
+			}
+			function toChangeblue(){
+				document.getElementById('bluecolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="deepskyblue";
+				window.localStorage.setItem("color",arr[3]);
+			}
+			function toChangeorange(){
+				document.getElementById('orangecolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="orange";
+				window.localStorage.setItem("color",arr[4]);
+			}
+			function toChangegreen(){
+				document.getElementById('greencolor').style.marginTop="5px";
+				document.getElementById('word').style.backgroundColor="greenyellow";
+				window.localStorage.setItem("color",arr[5]);
+			}
+			window.onload=function saveColor(){
+				document.getElementById('word').style.backgroundColor=window.localStorage.getItem("color")
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<fieldset id="all">
+				<legend class="topic">页面换肤</legend>
+				<div id="colors">
+					<div id="greycolor" onclick="toChangegrey()"></div>
+					<div id="purplecolor" onclick="toChangepurple()"></div>
+					<div id="redcolor" onclick="toChangered()"></div>
+					<div id="bluecolor" onclick="toChangeblue()"></div>
+					<div id="orangecolor" onclick="toChangeorange()"></div>
+					<div id="greencolor" onclick="toChangegreen()"></div>
+				</div>
+				<div id="word">
+					<p>localStorage将数据保存在客户端本地的硬件设施中，即使浏览器被关闭了，该数据仍然存在，
+						下次打开浏览器访问网址时仍可以继续使用</p>
+				</div>
+			</fieldset>
+		</form>
+	</body>
+</html>
