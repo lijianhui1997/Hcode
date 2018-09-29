@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<title>头像</title>
+		<script type="text/javascript">
+		window.onload=function(){	
+			var box=document.getElementById('box');
+			box.ondragover = function (e) {
+			e.preventDefault();
+        };
+        box.ondrop = function (e) {
+			 e.preventDefault();
+			 console.log(e.dataTransfer);
+			var FileList = e.dataTransfer.files;
+
+             console.log(FileList);
+
+             var File = new FileReader();
+
+             File.readAsDataURL(FileList[0]);
+
+             File.onload = function () {
+
+                 console.log(this);
+
+                 var oImg = document.createElement('img');
+
+                 oImg.src = this.result;
+
+                 document.body.appendChild(oImg);
+
+                 oImg.style.position="relative";
+
+                 oImg.style.top="-180px";   
+
+             }
+
+         }
+        }
+		</script>
+	</head>
+	<body>
+		<p>上传头像</p>
+		<div id="box" ></div>
+		
+	</body>
+</html>
+
+
