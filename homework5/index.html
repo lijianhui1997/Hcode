@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#canvas{
+				border: red solid 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="400" height="400"></canvas>
+		<script>
+			var can=document.getElementById('canvas');
+			var context=can.getContext('2d');
+			
+			
+			
+			
+
+			clock();
+			function clock(){
+				context.clearRect(0,0,400,400);
+				
+				//最外面圆形
+				context.beginPath();
+				context.lineWidth=5;
+				context.strokeStyle="greenyellow";
+				context.arc(200,200,150,0,2*Math.PI);
+				context.stroke();
+				context.closePath();
+					
+				
+				context.save();
+				context.translate(200, 200);
+				context.rotate(-Math.PI / 2);
+				
+				
+	
+				//刻度的分配
+				for (var k = 0; k < 60; k++) {
+					if(k%5==0){
+						context.lineWidth = 6;
+						context.strokeStyle = "red";
+						context.beginPath();
+					    context.moveTo(100, 0);
+					    context.lineTo(120, 0);
+					    context.stroke();
+					    context.font="bold 12px 微软雅黑";
+					    if(k==0){
+					    	
+					    	context.fillText(12,88,0);
+					    }
+					    else{
+					    	context.fillText(k/5,88,0);
+					    }
+				    
+					}
+					else{
+					context.lineWidth = 3;
+				    context.strokeStyle = "black";
+				    context.beginPath();
+				    context.moveTo(110, 0);
+				    context.lineTo(120, 0);
+				    context.stroke();
+					}
+					context.rotate(Math.PI / 180 * 6);
+				}
+				
+				
+				
+				
+	
+				var time = new Date();
+				var s = time.getSeconds();
+				var m = time.getMinutes();
+				var h = time.getHours();
+				if (h > 12) {
+				    h -= 12;
+				} 
+				
+			
+				//时针
+				context.save();
+		        context.lineWidth = 7;
+		        context.strokeStyle = "purple";
+		        context.beginPath();
+		        context.rotate(h * (Math.PI / 6) + (Math.PI / 360) * m + (Math.PI / 21600) * s);
+		        context.moveTo(-20, 0);
+		        context.lineTo(80, 0);
+		        context.stroke();
+		        context.restore();
+				//分针绘制
+		        context.save();
+		        context.lineWidth = 5;
+		        context.strokeStyle = "pink";
+		        context.beginPath();
+		        context.rotate((Math.PI / 30) * m + (Math.PI / 1800) * s);
+		        context.moveTo(-20, 0);
+		        context.lineTo(100, 0);
+		        context.stroke();
+		        context.restore();
+				//秒针
+		        context.save();
+		       	context.lineWidth = 3;
+		        context.strokeStyle = "red";
+		        context.beginPath();
+		        context.rotate((Math.PI / 30) * s);
+		        context.moveTo(-30, 0);
+		        context.lineTo(120, 0);
+		        context.stroke();
+		        
+		        //小圆点样式
+		        context.beginPath();
+				context.arc(85,0,10,0,2*Math.PI,true);
+				context.fillStyle = "red";
+				context.closePath();
+				context.fill();
+				
+				context.beginPath();
+				context.arc(85,0,4,0,2*Math.PI,true);
+				context.fillStyle = "black";
+				context.closePath();
+				context.fill();
+		        context.restore();
+		        
+				
+				//在钟表中心绘制圆点
+		        context.beginPath();
+		        context.arc(0, 0, 10, 0, Math.PI * 2, true);
+		        context.fillStyle = "red";
+		        context.closePath();
+		        context.fill();
+		        
+		        context.beginPath();
+		        context.arc(0, 0, 5, 0, Math.PI * 2, true);
+		        context.fillStyle = "black";
+		        context.closePath();
+		        context.fill();
+		        
+		        
+		        context.restore();
+		        
+		        
+				
+			}
+			
+			setInterval(clock,1000);//定时器实现每秒变化
+			
+
+			
+		</script>
+	</body>
+</html>
